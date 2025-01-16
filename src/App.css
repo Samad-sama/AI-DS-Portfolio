@@ -1,0 +1,218 @@
+:root {
+  --bg-home: transparent;
+  --bg-projects: transparent;
+  --bg-contact: transparent;
+  --text-color: #ffffff;
+  --navbar-bg: rgba(5, 8, 16, 0.9);
+  --star-color: #ffffff;
+  --star-glow: rgba(255, 255, 255, 0.9);
+  --accent-color: #64ffda;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --star-duration: 3s;
+  --transition-duration: 0.5s;
+  --transition-timing: ease-out;
+}
+
+body {
+  margin: 0;
+  background: #050810;
+  color: var(--text-color);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  padding-top: 70px;
+  position: relative;
+  z-index: 2;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp var(--transition-duration) var(--transition-timing) forwards;
+}
+
+section h1 {
+  font-size: 3rem;
+  color: var(--text-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.home-section {
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.projects-section {
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-section {
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+/* You can remove or comment out the previous App.css content if you want */
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  main {
+    padding-top: 60px;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  section h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 50px;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  section h1 {
+    font-size: 2rem;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add star background */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+.star {
+  position: absolute;
+  background: var(--star-color);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--star-glow),
+              0 0 20px var(--star-glow),
+              0 0 30px var(--star-glow);
+  animation: twinkle var(--star-duration) ease-in-out infinite;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.5);
+  }
+}
+
+/* Add shooting star animation */
+.shooting-star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(45deg, 
+    var(--accent-color), 
+    rgba(255, 255, 255, 0.8) 50%, 
+    transparent
+  );
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px var(--accent-color));
+  animation: shoot linear infinite;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%) translateY(200%) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add these styles to enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add these styles for section heights and spacing */
+.section {
+  min-height: 100vh;
+  padding: 80px 0; /* Account for navbar height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+}
+
+.home-section {
+  background-color: transparent;
+}
+
+.about-section {
+  background-color: transparent;
+}
+
+.projects-section {
+  background-color: transparent;
+}
+
+.contact-section {
+  background-color: transparent;
+}
