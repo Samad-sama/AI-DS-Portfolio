@@ -105,3 +105,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Developed by Abdessamad Sadoudi | AI & Data Science Professional**
 "# AI-Portfolio" 
+# AI-Portfolio
