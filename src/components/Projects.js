@@ -40,7 +40,7 @@ function Projects() {
         <FaReact title="React" />,
         <SiJavascript title="JavaScript" />
       ],
-      github: "https://github.com/Samad-sama/AI-Portfolio"
+      github: "https://github.com/Samad-sama/AI-DS-Portfolio"
     },
     {
       title: "Exploring Autoencoder Architectures",
