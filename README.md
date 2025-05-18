@@ -31,20 +31,20 @@ A modern, responsive portfolio website showcasing my expertise in Artificial Int
   - Blur effects  
 
 ## 📂 Project Structure  
-
-AI-Portfolio/  
-├── src/  
-│   ├── components/  
-│   │   ├── About.js  
-│   │   ├── Contact.js  
-│   │   ├── Home.js  
-│   │   ├── Projects.js  
-│   │   └── Stars.js  
-│   ├── assets/  
-│   ├── App.js  
-│   └── index.js  
-└── public/  
-
+```
+   AI-Portfolio/  
+   ├── src/  
+   │   ├── components/  
+   │   │   ├── About.js  
+   │   │   ├── Contact.js  
+   │   │   ├── Home.js  
+   │   │   ├── Projects.js  
+   │   │   └── Stars.js  
+   │   ├── assets/  
+   │   ├── App.js  
+   │   └── index.js  
+   └── public/  
+```
 ## 🚀 Featured Projects  
 
 1. **Arabic Fake News Detection**  
